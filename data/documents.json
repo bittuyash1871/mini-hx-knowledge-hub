@@ -1,0 +1,10 @@
+[
+  {
+    "id": "doc-001",
+    "title": "Usability Testing Guide",
+    "content": "Usability testing means observing real users as they attempt realistic tasks, so the team can see where people struggle. It is the best method when the research goal is to check whether users can complete a task, such as finishing an onboarding flow. Give participants specific tasks, ask them to think aloud, and avoid helping them. Testing with around five participants per round usually reveals the most common problems. Record task success, time on task, and points where users get stuck.",
+    "topics": ["usability testing", "task completion", "onboarding"],
+    "inspired_by": "General usability testing concepts from Nielsen Norman Group public articles",
+    "fictional": true
+  }
+]
