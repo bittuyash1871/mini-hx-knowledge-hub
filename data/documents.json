@@ -6,5 +6,20 @@
     "topics": ["usability testing", "task completion", "onboarding"],
     "inspired_by": "General usability testing concepts from Nielsen Norman Group public articles",
     "fictional": true
+  },   {
+    "id": "doc-002",
+    "title": "Accessible Forms Checklist",
+    "content": "Forms must be usable by people with disabilities. Every input needs a visible label that screen readers can announce. All fields and buttons must be reachable and usable with the keyboard alone. Error messages should explain what went wrong and how to fix it, not rely on color alone. Normal text should have a contrast ratio of at least 4.5 to 1 against its background. Long workflows such as onboarding contain many forms, so they need special accessibility attention.",
+    "topics": ["accessibility", "forms", "screen readers", "onboarding"],
+    "inspired_by": "W3C Web Accessibility Initiative and WCAG 2 public guidance",
+    "fictional": true
+  },
+  {
+    "id": "doc-003",
+    "title": "When to Use Surveys",
+    "content": "Surveys collect opinions and attitudes from many people quickly, such as satisfaction ratings or preferences. They are useful for measuring how users feel at scale. However, surveys capture what people say, not what they actually do. They are a weak choice for checking whether users can complete a task, because people often misremember or overestimate their own success. For task completion questions, observe behavior with usability testing instead.",
+    "topics": ["surveys", "attitudes", "satisfaction"],
+    "inspired_by": "General research method guidance from Nielsen Norman Group public articles",
+    "fictional": true
   }
 ]
