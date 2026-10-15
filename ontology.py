@@ -19,6 +19,7 @@ ENTITY_TYPES = {
 RELATIONSHIP_TYPES = [
     ("ResearchMethod", "SUPPORTS_GOAL", "ResearchGoal"),
     ("Workflow", "CONTAINS", "UIComponent"),
+    ("Workflow", "EVALUATED_FOR", "ResearchGoal"),
     ("UIComponent", "MUST_MEET", "AccessibilityGuideline"),
     ("Document", "DESCRIBES", "ResearchMethod"),
     ("Document", "DESCRIBES", "AccessibilityGuideline"),

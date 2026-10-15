@@ -50,8 +50,26 @@ def describe_connections(graph, start):
         relation = graph.edges[source, target]["relation"]
         print(f"  {graph.nodes[source]['label']} --{relation}--> {graph.nodes[target]['label']}")
 
+def recommend_methods(graph, workflow):
+    """Find research methods that support the goals a workflow is evaluated for."""
+    recommendations = []
+
+    # Step 1: follow arrows OUT of the workflow to find its goals
+    for _, goal, edge in graph.out_edges(workflow, data=True):
+        if edge["relation"] != "EVALUATED_FOR":
+            continue
+
+        # Step 2: follow arrows INTO each goal to find supporting methods
+        for method, _, edge2 in graph.in_edges(goal, data=True):
+            if edge2["relation"] == "SUPPORTS_GOAL":
+                recommendations.append((method, goal))
+
+    return recommendations
 
 if __name__ == "__main__":
     graph = build_graph(load_graph_data())
     print(f"Graph built: {graph.number_of_nodes()} nodes, {graph.number_of_edges()} edges\n")
     describe_connections(graph, "onboarding")
+    print("\nRecommended methods for onboarding:")
+    for method, goal in recommend_methods(graph, "onboarding"):
+        print(f"  {graph.nodes[method]['label']} (because it supports {graph.nodes[goal]['label']})")

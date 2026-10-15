@@ -16,6 +16,7 @@
     {"source": "usability_testing", "relation": "SUPPORTS_GOAL", "target": "task_completion"},
     {"source": "surveys", "relation": "SUPPORTS_GOAL", "target": "user_attitudes"},
     {"source": "onboarding", "relation": "CONTAINS", "target": "forms"},
+    {"source": "onboarding", "relation": "EVALUATED_FOR", "target": "task_completion"},
     {"source": "forms", "relation": "MUST_MEET", "target": "screen_reader_support"},
     {"source": "forms", "relation": "MUST_MEET", "target": "keyboard_navigation"},
     {"source": "doc-001", "relation": "DESCRIBES", "target": "usability_testing"},
